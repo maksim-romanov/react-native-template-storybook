@@ -1,0 +1,13 @@
+### Initial
+
+- [ ] Initial setup
+
+  - [ ] husky
+  - [ ] .env (react-native-config)
+  - [ ] react-native-rename
+  - [ ] webpack aliases (components, constants and etc)
+  - [ ] JR Linters
+
+- Development
+
+  - [ ] React navigation + safe area provider
