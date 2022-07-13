@@ -3,24 +3,30 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "postinstall": "patch-package",
+    "prestorybook": "rnstl",
     "prestart": "yarn update-stories",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "update-stories": "sb-rn-get-stories --config-path .ondevice",
     "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "yarn:clean": "rm -rf node_modules && yarn cache clean --force && yarn install",
     "android:clean": "cd android && ./gradlew clean && ./gradlew cleanBuildCache && cd ..",
-    "ios:clean": "cd ios && xcodebuild clean && rm -rf ~/Library/Caches/CocoaPods && rm -rf Pods && rm -rf ~/Library/Developer/Xcode/DerivedData/* && pod cache clean --all && pod deintegrate && pod setup && pod install && cd .."
+    "ios:clean": "cd ios && xcodebuild clean && rm -rf ~/Library/Caches/CocoaPods && rm -rf Pods && rm -rf ~/Library/Developer/Xcode/DerivedData/* && pod cache clean --all && pod deintegrate && pod setup && pod install && cd ..",
+    "lint:js": "eslint src --quiet",
+    "lint:css": "stylelint \"./src/**/*.css\"",
+    "lint:formatted": "prettier --check \"src/**/*.{js,css,json}\"",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.3",
     "@react-native-community/datetimepicker": "^6.1.2",
     "@react-native-community/slider": "^4.2.1",
+    "path": "^0.12.7",
     "react": "18.0.0",
     "react-dom": "^18.2.0",
     "react-native": "0.69.1",
@@ -58,8 +64,13 @@
     "eslint-plugin-storybook": "^0.6.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.70.3",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
+    "prettier": "^2.7.1",
     "react-native-clean-project": "^4.0.1",
+    "react-native-storybook-loader": "^2.0.5",
     "react-test-renderer": "18.0.0",
+    "storybook-readme": "^5.0.9",
     "typescript": "^4.4.4"
   },
   "resolutions": {
@@ -75,5 +86,14 @@
       "json",
       "node"
     ]
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./src/components"
+      ],
+      "pattern": "**/*.stories.?(ts|tsx|js|jsx)",
+      "outputFile": "./.ondevice/__storyLoader__.js"
+    }
   }
 }
