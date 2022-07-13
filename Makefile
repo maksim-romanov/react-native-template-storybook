@@ -16,16 +16,16 @@ setup:
 	# yarn jetify
 # ios run application
 start-ios:
-	arch -x86_64 npx react-native run-ios --scheme Development --simulator="$(SIMULATOR)"
+	arch -x86_64 npx react-native run-ios --scheme  MyApp.development --simulator="$(SIMULATOR)"
 
 start-ios-staging:
-	arch -x86_64 npx react-native run-ios --scheme Staging
+	arch -x86_64 npx react-native run-ios --scheme  MyApp.staging
 
 start-ios-production:
-	arch -x86_64 npx react-native run-ios --scheme Production
+	arch -x86_64 npx react-native run-ios --scheme  MyApp.production
 
-start-ios-integration:
-	arch -x86_64 npx react-native run-ios --scheme Integration
+# start-ios-integration:
+# 	arch -x86_64 npx react-native run-ios --scheme  MyApp.integration
 
 # android run application
 start-android:
