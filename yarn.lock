@@ -1558,19 +1558,19 @@
     eslint-plugin-import "^2.25.3"
     eslint-plugin-newline-destructuring "^1.0.1"
 
-"@jetrockets/eslint-config-react@^0.0.222":
-  version "0.0.222"
-  resolved "https://registry.yarnpkg.com/@jetrockets/eslint-config-react/-/eslint-config-react-0.0.222.tgz#66cc753faad445e5f6b19420c2b6a34e92c0d002"
-  integrity sha512-65e+9HsgCVVr9TGbQCywggqIA6iwphDvpB9KEPhtZ2d+XUfSqheZEHk6NbDsIjthCEEWdofW607q3JHrWTQg8Q==
+"@jetrockets/eslint-config-react@^0.0.23":
+  version "0.0.23"
+  resolved "https://registry.yarnpkg.com/@jetrockets/eslint-config-react/-/eslint-config-react-0.0.23.tgz#8f53acdb7bab9098888712661196e8f2e933f1d7"
+  integrity sha512-JazrRuXSAatAJpQHHxvIUK+oPBlGX48BA+/+DA1K5mMfPBYOFz41DDeNQF0vU/6yl+16/nVY/EWjoGrDNXmfWw==
   dependencies:
     eslint-plugin-import "^2.26.0"
     eslint-plugin-react "^7.26.1"
     eslint-plugin-react-hooks "^4.2.0"
 
-"@jetrockets/eslint-config-typescript@^0.0.163":
-  version "0.0.163"
-  resolved "https://registry.yarnpkg.com/@jetrockets/eslint-config-typescript/-/eslint-config-typescript-0.0.163.tgz#3a8c78edca04bb9063f781c9717b43245f1e81f2"
-  integrity sha512-2V2HTbLQ5CtfAGlSzHdcff0NPbDeRTssMsLZ3Sh0aXzvWsgJKVqPQd/czYGt7MGlXR5aAdM8JGlzjgNpLzYIgw==
+"@jetrockets/eslint-config-typescript@^0.0.17":
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/@jetrockets/eslint-config-typescript/-/eslint-config-typescript-0.0.17.tgz#eeb175e00b00387a80cd1dd759bc32b4eaed81e4"
+  integrity sha512-P5QJix21mW0Kl74DaPIs1V161/gz8ShlQ2DsK0GGr65It1PGsqz5s7uRA6R2NDtHt7B5Eu88WV3bgvqivxi6tQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.1.0"
     "@typescript-eslint/parser" "^5.1.0"

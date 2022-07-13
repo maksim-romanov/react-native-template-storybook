@@ -3,10 +3,10 @@
 - [ ] Initial setup
 
   - [ ] husky
-  - [ ] .env (react-native-config)
+  - [x] .env (react-native-config)
   - [ ] react-native-rename
-  - [ ] webpack aliases (components, constants and etc)
-  - [ ] JR Linters
+  - [x] webpack aliases (components, constants and etc)
+  - [x] JR Linters
 
 - Development
 
