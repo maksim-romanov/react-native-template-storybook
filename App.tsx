@@ -1,30 +1,33 @@
-import StorybookUIRoot from './.ondevice/Storybook';
-export { StorybookUIRoot as default };
+// import StorybookUIRoot from './.ondevice/Storybook';
+// export { StorybookUIRoot as default };
 
-// import React from 'react';
+import React from 'react';
 
-// import { StyleSheet, Text, View } from 'react-native';
-// import RNConfig from 'react-native-config';
+import { StyleSheet, Text, View } from 'react-native';
+import RNConfig from 'react-native-config';
 
-// function App() {
-//   React.useEffect(() => {
-//     console.log(RNConfig);
-//   }, []);
+import { MyButton } from 'components/Button/Button';
 
-//   return (
-//     <View style={styles.container}>
-//       <Text>{RNConfig.APP_ENV}</Text>
-//     </View>
-//   );
-// }
+function App() {
+  React.useEffect(() => {
+    // console.log(components);
+  }, []);
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-// });
+  return (
+    <View style={styles.container}>
+      {/* <Text>{RNConfig.APP_ENV}</Text> */}
+      <MyButton onPress={() => console.log('!!!!!!1')} text="hello"></MyButton>
+    </View>
+  );
+}
 
-// export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+export default App;
