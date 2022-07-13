@@ -1,6 +1,11 @@
 module.exports = {
   root: true,
-  extends: ['@react-native-community', 'plugin:storybook/recommended'],
+  extends: [
+    '@jetrockets/base',
+    '@jetrockets/react',
+    '@jetrockets/typescript',
+    'plugin:storybook/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   overrides: [
@@ -13,4 +18,7 @@ module.exports = {
       },
     },
   ],
+  settings: {
+    'import/ignore': ['node_modules/react-native/index\\.js$'],
+  },
 };

@@ -7,7 +7,6 @@ setup:
 	watchman watch-del-all
 	rm -rf ./node_modules
 	yarn
-	# node simulator_edit_config.js
 	rm -rf ./ios/Pods
 	rm -f ./ios/Podfile.lock
 	# arch -x86_64 npx react-native link
