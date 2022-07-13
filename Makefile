@@ -14,7 +14,7 @@ setup:
 	arch -x86_64 pod install --project-directory='./ios/'
 	arch -x86_64 npx react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'
 	# yarn jetify
-# ios run application
+
 start-ios:
 	arch -x86_64 npx react-native run-ios --scheme  MyApp.development --simulator="$(SIMULATOR)"
 
@@ -30,20 +30,18 @@ start-ios-production:
 # android run application
 start-android:
 	ENVFILE=.env arch -x86_64 npx react-native run-android
-	cd $$HOME/Library/Android/sdk/emulator/ && ./emulator -avd $$(./emulator -list-avds | tail -n 1)
 	adb reverse tcp:3000 tcp:3000
+
+# cd $$HOME/Library/Android/sdk/emulator/ && ./emulator -avd $$(./emulator -list-avds | tail -n 1)
 
 start-android-staging:
 	ENVFILE=.env.staging arch -x86_64 npx react-native run-android
-	cd $$HOME/Library/Android/sdk/emulator/ && ./emulator -avd $$(./emulator -list-avds | tail -n 1)
 
 start-android-production:
 	ENVFILE=.env.production arch -x86_64 npx react-native run-android
-	cd $$HOME/Library/Android/sdk/emulator/ && ./emulator -avd $$(./emulator -list-avds | tail -n 1)
 
 start-android-integration:
 	ENVFILE=.env.integration arch -x86_64 npx react-native run-android
-	cd $$HOME/Library/Android/sdk/emulator/ && ./emulator -avd $$(./emulator -list-avds | tail -n 1)
 
 
 build-js:

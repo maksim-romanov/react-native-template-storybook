@@ -79,10 +79,18 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    enableHermes: false,  // clean and rebuild if changing
+    enableHermes: true,  // clean and rebuild if changing
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
+
+project.ext.envConfigFiles = [
+    development: ".env",
+    production: ".env.production",
+    staging: ".env.staging",
+    // integration: ".env.integration",
+]
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -282,7 +290,7 @@ dependencies {
         // debugImplementation files(hermesPath + "hermes-debug.aar")
         // releaseImplementation files(hermesPath + "hermes-release.aar")
 
-         //noinspection GradleDynamicVersion
+        //  //noinspection GradleDynamicVersion
         implementation("com.facebook.react:hermes-engine:+") { // From node_modules
             exclude group:'com.facebook.fbjni'
         }
