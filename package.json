@@ -18,8 +18,7 @@
     "android:clean": "cd android && ./gradlew clean && ./gradlew cleanBuildCache && cd ..",
     "ios:clean": "cd ios && xcodebuild clean && rm -rf ~/Library/Caches/CocoaPods && rm -rf Pods && rm -rf ~/Library/Developer/Xcode/DerivedData/* && pod cache clean --all && pod deintegrate && pod setup && pod install && cd ..",
     "lint:js": "eslint src --quiet",
-    "lint:css": "stylelint \"./src/**/*.css\"",
-    "lint:formatted": "prettier --check \"src/**/*.{js,css,json}\"",
+    "lint:formatted": "prettier --check \"src/**/*.{js,ts,jsx,tsx,json}\"",
     "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore"
   },
   "dependencies": {
